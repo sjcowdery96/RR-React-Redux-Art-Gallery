@@ -10,7 +10,7 @@ export const dataSlice = createSlice({
     initialState,
     reducers: {
         setData: (state, action) => {
-            return {...state, apiData : action.payload}
+            return { ...state, apiData: action.payload }
         },
         clearData: () => {
             return initialState
@@ -28,7 +28,7 @@ export const dataSlice = createSlice({
 })
 
 export const { setData, clearData, incrementId, decrementId, inputId } = dataSlice.actions
-
+//this is the thunk function!
 export const fetchData = () => {
     const fetchDataThunk = async (dispatch, getState) => {
         let state = getState()
